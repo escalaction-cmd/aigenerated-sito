@@ -61,7 +61,9 @@ async function psdOf(html, dpi, comp) {
 async function serverAvailable() { try { const r = await fetch('api/ping', { cache: 'no-store' }); return r.ok; } catch (e) { return false; } }
 async function serverPdf(htmls) {
   const r = await fetch('api/pdf', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ pages: htmls }) });
-  if (!r.ok) throw new Error('Il server non è riuscito a creare il PDF'); return await r.blob();
+  if (!r.ok) throw new Error('Il server non è riuscito a creare il PDF');
+  // arrayBuffer e non blob(): con PDF grandi (40 MB e più) Chrome può interrompere la lettura come blob
+  return new Blob([await r.arrayBuffer()], { type: 'application/pdf' });
 }
 /* opts: {formats:{pdf,jpg,psd}, stores:[id|null], dpi, vector, pages:(store)=>[html], slug, onProgress(done,total,txt)} */
 async function exportAll(opts) {

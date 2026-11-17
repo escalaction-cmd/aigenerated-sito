@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /folifly/demo/
-Sitemap: https://aigenerated.it/sitemap.xml
+Sitemap: https://progetti.aigenerated.it/sitemap.xml
