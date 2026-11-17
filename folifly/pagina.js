@@ -124,7 +124,7 @@
     if(reduce||!hasIO)return;
     var sel='.sec .eye,.sec h2,.sec .lead,.steps,.insegne,.pages-scroll,.rule,.wide,.split>figure,.locks,.fmt,.piat .pf,.pts li,.ledger li,.duo article,.trio article,.end h2,.end p,.end .ctas';
     var els=$$(page,sel).filter(function(el){var r=el.getBoundingClientRect(); return r.height>0&&r.top>innerHeight;});
-    var io=new IntersectionObserver(function(es){es.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('in'); io.unobserve(en.target);} });},{rootMargin:'0px 0px -8% 0px'});
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('shown'); io.unobserve(en.target);} });},{rootMargin:'0px 0px -8% 0px'});
     els.forEach(function(el){
       var sib=$$(el.parentNode,':scope>.rv').length; el.style.setProperty('--d',Math.min(sib,4)*90+'ms');
       el.classList.add('rv'); io.observe(el);

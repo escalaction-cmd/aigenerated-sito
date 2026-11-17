@@ -228,6 +228,9 @@ p{margin:0}
 .end h2{color:var(--band-fg);max-width:16ch}
 .end p{margin-top:14px;max-width:52ch;color:var(--band-muted);font-size:1.125rem}
 .end .payoff{color:var(--band-fg)}
+.end p.end-mail{margin-top:18px;font-size:1rem}
+.end .end-mail a{color:var(--band-fg);text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.end .end-mail a:hover{text-decoration-thickness:2px}
 @media (max-width:700px){.end-mark{width:52vw;top:-8%;right:-18%;opacity:.35}}
 
 /* piede: ordinato come la pagina dei progetti (marchio, colonne di link, nota, riga legale) */
@@ -446,7 +449,7 @@ p{margin:0}
 /* ===================== cura della pagina (18 novembre) ===================== */
 /* comparsa allo scorrere: si parte da uno stato già visibile (mai trasparente del tutto) */
 .rv{opacity:.35;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
-.rv.in{opacity:1;transform:none}
+.rv.shown{opacity:1;transform:none}
 /* passi che avanzano da soli, con la barra */
 .steps button{position:relative}
 .steps .sbar{position:absolute;left:12px;right:14px;bottom:5px;height:2px;border-radius:2px;background:var(--line);overflow:hidden;opacity:0;transition:opacity .2s}
