@@ -1,0 +1,77 @@
+﻿Cod. articolo;Descrizione;Marchio;Pezzatura;Prezzo promo;Prezzo di listino;Prezzo minimo 30 gg;Reparto;Inizio;Fine;Priorità;Tipo promozione;Pezzi disponibili;Limite per persona;Note interne;Centro costo
+F01;Latte intero fresco;Fiordaia;1 L;1,19;1,59;1,59;Freschi;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+F02;Mozzarella di latte vaccino;Fiordaia;3 x 100 g;1,79;2,69;2,69;Freschi;23/11/2026;29/11/2026;1;Percentuale;;;;CC-410
+F03;Yogurt greco bianco;Fiordaia;2 x 150 g;1,49;1,99;1,99;Freschi;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+F04;Petto di pollo a fette;Brinoro;400 g;4,49;6,29;5,49;Freschi;23/11/2026;29/11/2026;1;Percentuale;;;;CC-410
+F05;Prosciutto cotto alta qualità;Brinoro;100 g;1,49;2,19;2,19;Freschi;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+O01;Mele rosse;Campiverdi;1 kg;1,69;2,49;2,49;Ortofrutta;23/11/2026;29/11/2026;1;Percentuale;;;;CC-410
+O02;Arance da spremuta;Campiverdi;2 kg;2,29;3,29;3,29;Ortofrutta;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+O03;Insalata mista lavata;Campiverdi;250 g;1,29;1,79;1,79;Ortofrutta;23/11/2026;29/11/2026;3;Percentuale;;;;CC-410
+S01;Pizza margherita surgelata;Fornace Bianca;350 g;1,79;2,99;2,99;Surgelati;23/11/2026;29/11/2026;1;Doppio sconto;;;;CC-410
+D01;Penne rigate di semola;Nugosa;500 g;0,49;0,99;0,99;Dispensa;23/11/2026;29/11/2026;1;Sottocosto;30000;10;;CC-410
+D02;Passata di pomodoro;Nugosa;690 g;0,89;1,29;1,29;Dispensa;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+D03;Olio extra vergine di oliva;Nugosa;750 ml;5,99;8,99;6,49;Dispensa;23/11/2026;29/11/2026;1;Percentuale;;;Prezzo di listino cambiato il 20/10;CC-410
+D04;Riso Carnaroli;Nugosa;1 kg;1,99;2,59;2,59;Dispensa;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+D05;Caffè macinato per moka;Nuvolara;250 g;2,49;3,99;3,99;Dispensa;23/11/2026;29/11/2026;1;Sottocosto;9000;4;;CC-410
+K01;Frollini al burro;Nugosa;350 g;1,59;2,29;2,29;Colazione e dolci;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+K02;Biscotti al cacao;Dolcemeri;400 g;1,99;2,49;2,49;Colazione e dolci;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+K03;Crema alle nocciole;Dolcemeri;400 g;2,49;3,49;3,49;Colazione e dolci;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+K04;Cioccolato al latte;Dolcemeri;100 g;0,99;1,29;1,29;Colazione e dolci;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+K05;Merendine alla vaniglia;Dolcemeri;6 pezzi;1,49;1,99;1,99;Colazione e dolci;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+B01;Acqua naturale;Fontevia;1,5 L;0,29;0,49;0,49;Bevande;23/11/2026;29/11/2026;1;Sottocosto;48000;12;;CC-410
+B02;Acqua frizzante;Fontevia;1,5 L;0,39;0,55;0,55;Bevande;23/11/2026;29/11/2026;3;Percentuale;;;;CC-410
+B03;Aranciata;Fontevia;1,5 L;1,29;1,69;1,69;Bevande;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+B04;Succo di pesca;Fontevia;1 L;1,29;1,79;1,79;Bevande;23/11/2026;29/11/2026;3;Percentuale;;;;CC-410
+B05;Tè freddo al limone;Fontevia;33 cl;0,59;0,89;0,89;Bevande;23/11/2026;29/11/2026;3;Percentuale;;;;CC-410
+B06;Birra chiara;Fornace Bianca;33 cl;0,89;1,19;1,19;Bevande;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+B07;Vino rosso della casa;Toselos;750 ml;3,99;5,99;3,99;Bevande;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+C01;Detersivo per piatti al limone;Nugosa;750 ml;1,29;1,79;1,79;Casa;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+C02;Spray multiuso;Nugosa;500 ml;1,79;2,49;2,49;Casa;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+C03;Ammorbidente concentrato;Nugosa;1,5 L;2,49;4,49;4,49;Casa;23/11/2026;29/11/2026;1;Sottocosto;;;;CC-410
+C04;Detersivo per lavatrice;Nugosa;1,8 L;4,99;6,99;6,99;Casa;23/11/2026;29/11/2026;1;Percentuale;;;;CC-410
+C05;Carta da cucina;Nugosa;4 rotoli;1,99;4,29;4,29;Casa;23/11/2026;29/11/2026;1;Sottocosto;12000;4;;CC-410
+C06;Sacchi per rifiuti;Nugosa;20 pezzi;1,49;2,19;2,19;Casa;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+P01;Crema mani;Nugosa;75 ml;1,79;2,99;2,99;Cura persona;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+P02;Crema corpo;Nugosa;250 ml;3,99;4,99;4,99;Cura persona;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+P03;Crema viso;Nugosa;50 ml;4,49;5,99;5,99;Cura persona;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+P04;Crema piedi;Nugosa;100 ml;2,09;3,49;3,49;Cura persona;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+P05;Dentifricio protezione completa;Nugosa;75 ml;1,49;2,49;2,49;Cura persona;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+P06;Shampoo delicato;Nugosa;250 ml;2,49;3,49;3,49;Cura persona;26/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+P07;Bagnoschiuma;Nugosa;500 ml;1,79;2,99;2,99;Cura persona;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+A03;Lettiera per gatto;Pelonia;10 L;4,99;6,49;6,49;Animali;26/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+I01;Pannolini taglia 4;Fletami;40 pezzi;5,99;9,99;9,99;Infanzia;23/11/2026;08/12/2026;1;Sottocosto;3500;2;;CC-410
+I02;Salviettine delicate;Fletami;72 pezzi;1,99;1,99;1,99;Infanzia;23/11/2026;29/11/2026;2;3x2;;;;CC-410
+I03;Bagnetto delicato;Fletami;400 ml;3,99;3,99;3,99;Infanzia;23/11/2026;29/11/2026;2;3x2;;;;CC-410
+I04;Crema protettiva;Fletami;100 ml;4,49;4,49;4,49;Infanzia;23/11/2026;29/11/2026;2;3x2;;;;CC-410
+F06;Burro;Fiordaia;250 g;1,99;2,49;2,49;Freschi;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+F07;Formaggio grattugiato;Fiordaia;100 g;1,49;1,99;1,99;Freschi;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+F08;Uova fresche;Campiverdi;6 pezzi;1,89;2,29;2,29;Freschi;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+F09;Fesa di tacchino;Brinoro;100 g;1,69;2,09;2,09;Freschi;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+F10;Hamburger di manzo;Brinoro;2 x 100 g;2,79;3,49;3,49;Freschi;23/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+O04;Banane;Campiverdi;1 kg;1,29;1,79;1,79;Ortofrutta;23/11/2026;29/11/2026;3;Percentuale;;;;CC-410
+O05;Pomodorini;Campiverdi;500 g;1,49;1,99;1,99;Ortofrutta;23/11/2026;29/11/2026;3;Percentuale;;;;CC-410
+O06;Patate;Campiverdi;2 kg;1,79;2,49;2,49;Ortofrutta;23/11/2026;29/11/2026;3;Percentuale;;;;CC-410
+S02;Piselli surgelati;Campiverdi;450 g;1,39;1,89;1,89;Surgelati;23/11/2026;29/11/2026;3;Percentuale;;;;CC-410
+S03;Gelato alla vaniglia;Dolcemeri;500 g;2,99;3,99;3,99;Surgelati;23/11/2026;29/11/2026;3;Percentuale;;;;CC-410
+D06;Spaghetti;Nugosa;500 g;1,19;0,99;0,99;Dispensa;23/11/2026;26/11/2026;2;Percentuale;;;Da rivedere con il fornitore;CC-410
+D07;Tonno all'olio d'oliva;Pescalba;3 x 80 g;2,99;3,99;3,99;Dispensa;23/11/2026;26/11/2026;2;Percentuale;;;;CC-410
+D08;Zucchero;Nugosa;1 kg;0,99;1,29;1,29;Dispensa;23/11/2026;26/11/2026;2;Percentuale;;;;CC-410
+D09;Farina 00;Nugosa;1 kg;0,69;0,99;0,99;Dispensa;23/11/2026;26/11/2026;2;Percentuale;;;;CC-410
+D1O;Sugo al basilico;Nugosa;190 g;1,09;1,49;1,49;Dispensa;23/11/2026;26/11/2026;2;Percentuale;;;Codice scritto a mano;CC-410
+D11;Olive verdi;Pescalba;150 g;1,49;1,99;1,99;Dispensa;23/11/2026;26/11/2026;2;Percentuale;;;;CC-410
+D12;Caffè in capsule;Nuvolara;16 capsule;2,99;3,99;3,99;Dispensa;23/11/2026;26/11/2026;2;Percentuale;;;;CC-410
+K06;Fette biscottate;Dolcemeri;300 g;1,29;1,79;1,79;Colazione e dolci;23/11/2026;26/11/2026;2;Percentuale;;;;CC-410
+K07;Marmellata di albicocche;Dolcemeri;350 g;1,69;2,29;2,29;Colazione e dolci;23/11/2026;29/11/2026;3;Percentuale;;;;CC-410
+K08;Cereali per la colazione croccanti ai cinque cereali con miele e frutta secca;Dolcemeri;375 g;2,29;2,99;2,99;Colazione e dolci;23/11/2026;29/11/2026;3;Percentuale;;;;CC-410
+B08;Cola;Fontevia;1,5 L;0,89;1,19;1,19;Bevande;23/11/2026;29/11/2026;3;Percentuale;;;;CC-410
+B09;Spumante brut;Toselos;750 ml;3,49;4,99;4,99;Bevande;23/11/2026;29/11/2026;1;Percentuale;;;;CC-410
+B10;Succo di mela;Fontevia;1 L;1,19;1,59;1,59;Bevande;23/11/2026;29/11/2026;3;Percentuale;;;;CC-410
+C07;Detersivo pavimenti;Nugosa;1 L;1,69;2,29;2,29;Casa;26/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+C08;Candeggina delicata;Nugosa;2 L;1,39;1,89;1,89;Casa;26/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+C09;Carta igienica;Nugosa;12 rotoli;4,49;5,99;5,99;Casa;26/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+C10;Spugne;Nugosa;;0,99;1,49;1,49;Casa;26/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+P08;Deodorante spray;Nugosa;150 ml;1,79;2,49;2,49;Cura persona;26/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+P09;Collutorio;Nugosa;500 ml;2,29;3,19;3,19;Cura persona;26/11/2026;29/11/2026;2;Percentuale;;;;CC-410
+A05;Crocchette per gatto;Pelonia;1,5 kg;3,49;4,99;4,99;Animali;23/11/2026;29/11/2026;3;Percentuale;;;;CC-410
+X901;Pane in cassetta integrale;Fornace Bianca;400 g;1,49;1,99;1,99;Freschi;23/11/2026;29/11/2026;2;Percentuale;;;Prodotto nuovo, foto in arrivo;CC-410
+X902;Biscotti ai cereali;Dolcemeri;500 g;1,79;2,49;2,49;Colazione e dolci;23/11/2026;29/11/2026;3;Percentuale;;;Prodotto nuovo, foto in arrivo;CC-410
