@@ -307,3 +307,11 @@ dialog.sheet-p::backdrop{background:rgba(5,7,11,.72)}
 /* cambio di lingua: piccolo e discreto in alto a destra, come su vedeasy.com */
 .lang{position:fixed;top:max(14px,env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));z-index:56;display:inline-grid;place-items:center;min-width:44px;min-height:44px;padding:0 14px;font:500 .75rem/1 var(--mono);letter-spacing:.14em;color:#fff;text-decoration:none;background:rgba(11,14,19,.55);border:1px solid rgba(255,255,255,.28);border-radius:999px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:border-color .2s,background-color .2s}
 .lang:hover{border-color:#fff;background:rgba(11,14,19,.8)}
+
+/* telefono: "Scorri" sta sotto la frase, nel flusso, così non la copre mai (anche con le barre di Safari) */
+@media (max-width:899px){
+  .hero{display:flex;flex-direction:column;align-items:stretch;justify-content:center;padding:max(24px,env(safe-area-inset-top,0px)) 0 max(18px,env(safe-area-inset-bottom,0px))}
+  .hero-in{flex:none}
+  .arte-m{max-height:36vh;max-height:36svh}
+  .scorri{position:relative;z-index:1;left:auto;bottom:auto;transform:none;margin:20px auto 0;flex:none}
+}
