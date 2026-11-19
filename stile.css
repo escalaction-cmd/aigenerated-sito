@@ -180,3 +180,130 @@ a{color:inherit}
 /* telefoni non alti: il progetto deve starci tutto in una schermata */
 @media (max-width:899px) and (max-height:820px){.vis{height:39%}.come{display:none}.testo{gap:8px;padding-top:14px}.num b{font-size:1.9rem}}
 @media (max-width:899px) and (max-height:680px){.num{display:none}.frase{font-size:.9375rem}}
+
+/* regola dei progetti: titolo, sottotitolo, un solo bottone. Vedeasy ha il suo carattere (Sora) */
+@font-face{font-family:'Sora';font-weight:500;font-display:swap;src:url(fonts/Sora500.ttf) format('truetype')}
+.p-vedeasy h2,.nome-foot{font-family:'Sora',var(--ui);font-weight:500;letter-spacing:-.03em}
+.frase{max-width:34ch}
+.azioni{padding-top:10px}
+.foot-top{align-items:start}
+.nome-foot{margin:0;font-size:1.5rem;line-height:1.1;color:var(--piede-forte)}
+@media (min-width:900px){.frase{font-size:1.3125rem}}
+
+/* nome del progetto accanto al numero */
+.num span{text-transform:uppercase;letter-spacing:.14em}
+/* dichiarazione sull'AI, sempre sopra le immagini e i video di esempio */
+
+/* il quarto riquadro, vuoto: lo riempie chi legge */
+.tuo{--pr:1;--p:#FFF3D2;--p-fg:#15110A;position:relative;isolation:isolate;overflow:hidden;background:var(--nero);padding:clamp(72px,10vw,130px) 0}
+.tuo::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 70% at 78% 50%,rgba(255,243,210,.10),transparent 70%)}
+.tuo-in{max-width:var(--w);margin:0 auto;display:grid;gap:40px;align-items:center;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.tuo .testo{order:0;padding:0;flex:none;gap:12px}
+.tuo .testo h2{font-size:clamp(2.2rem,9.5vw,3.2rem)}
+.modulo{display:grid;gap:8px;margin-top:6px}
+.modulo label{font:500 .6875rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.modulo input{width:100%;min-height:52px;padding:0 16px;font:400 1rem/1.3 var(--ui);color:#fff;background:rgba(255,255,255,.06);border:1.5px solid #343B55;border-radius:14px;transition:border-color .2s,background-color .2s}
+.modulo input::placeholder{color:#7C839E}
+.modulo input:hover{border-color:#4A5270}
+.modulo input:focus{outline:none;border-color:#FFF3D2;background:rgba(255,243,210,.07);box-shadow:0 0 0 4px rgba(255,243,210,.14)}
+.modulo .btn{margin-top:10px;border:0;cursor:pointer;justify-self:start;width:100%}
+.modulo .btn.p{justify-content:space-between}
+@media (min-width:520px){.modulo .btn{width:auto;justify-content:center}}
+.piccolo{margin:2px 0 0;font-size:.8125rem;color:var(--muted)}
+.tuo .vis{flex:none;height:auto;margin:0;aspect-ratio:4/3.5;background:linear-gradient(135deg,#10141D,#1B2132)}
+.fili-tuo{position:absolute;inset:0;width:100%;height:100%;display:block}
+.bozza{position:absolute;left:24%;right:6%;top:30%;bottom:8%;display:flex;flex-direction:column;justify-content:center;gap:10px;padding:clamp(14px,2.6vw,30px);border:2px dashed rgba(255,243,210,.45);border-radius:20px;background:rgba(255,255,255,.03);transition:border-color .3s,background-color .3s,box-shadow .3s;overflow:hidden}
+.bozza[data-pieno="1"]{border-style:solid;border-color:#FFF3D2;background:rgba(255,243,210,.08);box-shadow:0 0 70px -14px rgba(255,243,210,.4)}
+.b-num{margin:0;display:flex;gap:10px;align-items:baseline;font:500 .6875rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.b-num b{font:700 1.5rem/1 var(--disp);letter-spacing:0;color:transparent;-webkit-text-stroke:1.2px #FFF3D2}
+.b-tit{margin:0;font:700 clamp(1.25rem,3.2vw,2.3rem)/1.06 var(--disp);letter-spacing:-.02em;color:#fff;overflow-wrap:anywhere}
+.b-sub{margin:0;font-size:clamp(.875rem,1.6vw,1.0625rem);line-height:1.4;color:#C9CDE0;overflow-wrap:anywhere}
+.b-tit:empty::before{content:attr(data-vuoto);color:transparent;-webkit-text-stroke:1px rgba(255,243,210,.55)}
+.b-tit:empty::after{content:'';display:inline-block;width:3px;height:.95em;margin-left:6px;vertical-align:-.1em;background:#FFF3D2;animation:lampeggia 1.1s steps(2) infinite}
+.b-sub:empty::before{content:attr(data-vuoto);color:#6B7391}
+@keyframes lampeggia{50%{opacity:0}}
+@media (min-width:900px){
+  .tuo-in{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(40px,6vw,88px)}
+  .tuo .vis{aspect-ratio:1/1.02;border-radius:30px}
+  .tuo .testo h2{font-size:clamp(3rem,5vw,4.6rem)}
+}
+/* telefono: la bozza sta subito sotto il titolo, così si vede riempirsi mentre si scrive sotto */
+@media (max-width:899px){
+  .tuo-in{gap:22px}
+  .tuo .testo{display:contents}
+  .tuo .num,.tuo h2,.tuo .frase{order:1}
+  .tuo .vis{order:2}
+  .tuo .modulo{order:3}
+  .tuo .num,.tuo h2,.tuo .frase{margin:0}
+}
+
+/* sigillo "generato con l'AI", lo stesso dei video di Vedeasy: sempre nello stesso angolo */
+.vis .sigillo{position:absolute;left:14px;top:14px;z-index:4;width:clamp(112px,12vw,150px);height:auto;pointer-events:none}
+
+/* modulo del quarto riquadro: stessi campi di vedeasy.com */
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px 12px}
+.f{display:grid;gap:7px;align-content:start;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font:500 .6875rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.modulo input[type=text],.modulo input[type=email],.modulo input[type=tel],.modulo textarea{width:100%;min-height:52px;padding:0 16px;font:400 1rem/1.4 var(--ui);color:#fff;background:rgba(255,255,255,.06);border:1.5px solid #343B55;border-radius:14px;transition:border-color .2s,background-color .2s,box-shadow .2s}
+.modulo textarea{padding:14px 16px;min-height:104px;resize:vertical;display:block}
+.modulo textarea::placeholder{color:#7C839E}
+.modulo textarea:hover{border-color:#4A5270}
+.modulo textarea:focus{outline:none;border-color:#FFF3D2;background:rgba(255,243,210,.07);box-shadow:0 0 0 4px rgba(255,243,210,.14)}
+.modulo [aria-invalid="true"]{border-color:#FF8A7A}
+.err{min-height:0;font-size:.8125rem;line-height:1.3;color:#FF8A7A}
+.err:empty{display:none}
+.check{display:flex;gap:12px;align-items:flex-start;margin-top:6px;font-size:.9375rem;color:#DADDEC;cursor:pointer}
+.check input{flex:none;width:22px;height:22px;margin:1px 0 0;accent-color:#FFF3D2}
+.check a{color:#fff;text-underline-offset:3px}
+.piccolo a{color:#fff;text-underline-offset:3px}
+.modulo .btn:disabled{opacity:.7}
+@media (max-width:420px){.fields{grid-template-columns:1fr}}
+
+/* i cinque fili si accendono uno a uno, la luce cresce, e al quinto esplode un lampo */
+.tuo-vis{--k:0}
+.tuo-vis[data-k="1"]{--k:1}.tuo-vis[data-k="2"]{--k:2}.tuo-vis[data-k="3"]{--k:3}.tuo-vis[data-k="4"]{--k:4}.tuo-vis[data-k="5"]{--k:5}
+.ombra{stroke-dasharray:2 14;stroke:rgba(255,255,255,.16)!important;stroke-dashoffset:0}
+.tuo .fili .filo{animation:none;stroke-dashoffset:1;opacity:.95;filter:drop-shadow(0 0 0 transparent);transition:stroke-dashoffset 1.1s cubic-bezier(.2,.8,.2,1),filter .6s}
+.tuo .fili .filo.on{stroke-dashoffset:0;filter:drop-shadow(0 0 10px currentColor)}
+.nodo-t{transform-origin:230px 330px;transform-box:view-box;opacity:calc(.3 + var(--k)*.14);transform:scale(calc(.55 + var(--k)*.17));transition:transform 1s cubic-bezier(.2,.8,.2,1),opacity 1s}
+.tuo-vis.flare .nodo-t{animation:lampo 1.5s cubic-bezier(.2,.8,.2,1)}
+@keyframes lampo{0%{transform:scale(1.4)}30%{transform:scale(2.5)}100%{transform:scale(1.4)}}
+.tuo-vis[data-k="5"] .bozza{border-style:solid;border-color:#FFF3D2;box-shadow:0 0 90px -10px rgba(255,243,210,.55)}
+@media (prefers-reduced-motion:reduce){.b-tit:empty::after{animation:none}.tuo .fili .filo{transition:none}.nodo-t,.bozza,.modulo input,.modulo textarea{transition:none}.tuo-vis.flare .nodo-t{animation:none}}
+.modulo .check{font:400 .9375rem/1.4 var(--ui);letter-spacing:0;text-transform:none;color:#DADDEC;margin-top:6px}
+.modulo .check input{width:22px;min-height:0;height:22px;padding:0;border-radius:6px}
+.tuo .bozza{left:37%;right:5%;top:24%;bottom:14%}
+@media (max-width:899px){.tuo .bozza{left:36%;top:22%;bottom:12%}}
+.b-tit{font-size:clamp(1.05rem,2.2vw,1.75rem);display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.b-sub{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tuo .bozza{overflow:hidden}
+.vis .sigillo{width:clamp(136px,14vw,176px)}
+
+/* informativa privacy e cookie, scritta per questa pagina */
+.linkbtn{display:inline-flex;align-items:center;min-height:32px;padding:0;background:none;border:0;font:inherit;color:#fff;text-decoration:underline;text-underline-offset:3px;cursor:pointer;text-align:left}
+.fcol .linkbtn{text-decoration:none;font-size:.9375rem;color:var(--piede-forte)}
+.fcol .linkbtn:hover{text-decoration:underline;text-underline-offset:4px}
+dialog.sheet-p{border:1px solid #2A3044;border-radius:22px;padding:0;width:min(680px,calc(100vw - 24px));max-height:calc(100dvh - 32px);background:#131822;color:#DADDEC;box-shadow:0 30px 80px -20px rgba(0,0,0,.8);overflow:hidden}
+dialog.sheet-p[open]{display:flex;flex-direction:column}
+dialog.sheet-p::backdrop{background:rgba(5,7,11,.72)}
+.sp-testa{flex:none;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:22px 24px 16px;border-bottom:1px solid #2A3044}
+.sp-testa .eyebrow{margin:0 0 6px;color:#7C839E}
+.sp-testa h2{margin:0;font:700 1.6rem/1.1 var(--disp);color:#fff}
+.sp-testa .btn{min-height:44px;padding:0 18px;font-size:.95rem;border:1.5px solid #4A5270;background:transparent;color:#fff;cursor:pointer}
+.sp-corpo{overflow:auto;padding:8px 24px 26px;font-size:.9375rem;line-height:1.6;-webkit-overflow-scrolling:touch}
+.sp-corpo h3{margin:22px 0 6px;font:600 1rem/1.3 var(--ui);color:#fff}
+.sp-corpo p,.sp-corpo ul{margin:0 0 10px}
+.sp-corpo ul{padding-left:20px}
+.sp-corpo li{margin-bottom:6px}
+
+/* piede pulito e lineare come quello di Vedeasy: colonne a sinistra, dati aziendali in una riga, dichiarazione AI discreta */
+.foot .in{padding-block:48px 28px;gap:28px}
+.foot-top{display:flex;flex-wrap:wrap;gap:28px clamp(48px,8vw,120px);justify-content:flex-start}
+.nota{font-size:.6875rem;line-height:1.4;color:var(--piede-muted);opacity:.85;max-width:none;letter-spacing:.01em}
+.legal{padding-top:20px}
+@media (max-width:700px){.foot-top{display:grid;grid-template-columns:1fr 1fr;gap:26px 16px}}
+
+/* cambio di lingua: piccolo e discreto in alto a destra, come su vedeasy.com */
+.lang{position:fixed;top:max(14px,env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));z-index:56;display:inline-grid;place-items:center;min-width:44px;min-height:44px;padding:0 14px;font:500 .75rem/1 var(--mono);letter-spacing:.14em;color:#fff;text-decoration:none;background:rgba(11,14,19,.55);border:1px solid rgba(255,255,255,.28);border-radius:999px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:border-color .2s,background-color .2s}
+.lang:hover{border-color:#fff;background:rgba(11,14,19,.8)}
