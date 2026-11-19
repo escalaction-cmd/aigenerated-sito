@@ -230,6 +230,44 @@
     else { visibile=true; avvia(); }
   }
 
+  // «Prenota una demo»: molti computer non hanno un programma di posta collegato e il link e-mail non fa nulla.
+  // Il clic apre un riquadro con l'indirizzo e il testo da copiare; «Apri nella posta» resta per chi ce l'ha.
+  (function contatto(){
+    var TX={it:{t:'Prenota una demo',p:'Scrivici a questo indirizzo con i dati qui sotto, ti rispondiamo noi.',a:'Indirizzo',m:'Testo da compilare',ca:'Copia indirizzo',cm:'Copia testo',ok:'Copiato',po:'Apri nella posta',x:'Chiudi'},
+            en:{t:'Book a demo',p:'Write to this address with the details below and we will reply.',a:'Address',m:'Text to fill in',ca:'Copy address',cm:'Copy text',ok:'Copied',po:'Open in my mail app',x:'Close'}};
+    var dlg=null;
+    function lingua(){ return (document.documentElement.lang||'it').slice(0,2)==='en'?'en':'it'; }
+    function copia(testo,btn,etic){
+      function fatto(){ btn.textContent=TX[lingua()].ok; setTimeout(function(){btn.textContent=etic;},1600); }
+      function vecchio(){
+        var t=document.createElement('textarea'); t.value=testo; t.setAttribute('readonly',''); t.style.cssText='position:fixed;opacity:0';
+        document.body.appendChild(t); t.select(); try{document.execCommand('copy'); fatto();}catch(err){} t.remove();
+      }
+      try{ if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(testo).then(fatto,vecchio); return; } }catch(err){}
+      vecchio();
+    }
+    function apri(href){
+      var u=href.replace(/^mailto:/i,''), i=u.indexOf('?'), ind=decodeURIComponent(i<0?u:u.slice(0,i)), q=new URLSearchParams(i<0?'':u.slice(i+1));
+      var t=TX[lingua()], corpo=q.get('body')||'';
+      if(dlg)dlg.remove();
+      dlg=document.createElement('dialog'); dlg.className='contatto';
+      dlg.innerHTML='<form method="dialog"><h2></h2><p class="cp"></p><p class="ck"></p><output class="cv ind"></output><p class="ck mk"></p><output class="cv cor"></output><div class="ca"><button type="button" class="btn primary c-ind"></button><button type="button" class="btn c-cor"></button><a class="btn c-posta"></a><button class="btn c-x"></button></div></form>';
+      var $=function(s){return dlg.querySelector(s);};
+      $('h2').textContent=t.t; $('.cp').textContent=t.p; $('.ck').textContent=t.a; $('.mk').textContent=t.m;
+      $('.ind').textContent=ind; $('.cor').textContent=corpo; $('.c-ind').textContent=t.ca; $('.c-cor').textContent=t.cm; $('.c-x').textContent=t.x;
+      var pa=$('.c-posta'); pa.textContent=t.po; pa.href=href;
+      $('.c-ind').addEventListener('click',function(){copia(ind,this,t.ca);});
+      $('.c-cor').addEventListener('click',function(){copia((q.get('subject')?q.get('subject')+'\n\n':'')+corpo,this,t.cm);});
+      dlg.addEventListener('click',function(e){ if(e.target===dlg)dlg.close(); });
+      document.body.appendChild(dlg);
+      if(dlg.showModal)dlg.showModal(); else dlg.setAttribute('open','');
+    }
+    document.addEventListener('click',function(e){
+      var a=e.target.closest&&e.target.closest('a[href^="mailto:"]'); if(!a||a.classList.contains('c-posta'))return;
+      e.preventDefault(); apri(a.getAttribute('href'));
+    });
+  })();
+
   var pages=$$(document,'[data-lang]');
   pages.forEach(function(p){
     var f=p.querySelector('[data-film]'); if(f)film(f);

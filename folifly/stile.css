@@ -535,3 +535,15 @@ p{margin:0}
   .edl .ed-tavolo{max-height:none}
 }
 @media (prefers-reduced-motion:reduce){.edl-cursor{transition:none}.edl-psd li{animation:none;opacity:1;transform:none}}
+/* «Prenota una demo»: riquadro con indirizzo e testo da copiare */
+dialog.contatto{border:0;border-radius:22px;padding:0;max-width:min(520px,calc(100vw - 32px));width:100%;background:var(--paper);color:var(--ink);box-shadow:0 30px 80px -20px rgba(0,0,0,.45)}
+dialog.contatto::backdrop{background:rgba(10,14,12,.55)}
+dialog.contatto form{padding:28px 26px 24px;display:grid;gap:10px}
+dialog.contatto h2{font:700 1.5rem/1.15 var(--ui);margin:0}
+dialog.contatto .cp{margin:0 0 6px;opacity:.8}
+dialog.contatto .ck{margin:10px 0 0;font:600 .75rem/1 var(--ui);letter-spacing:.08em;text-transform:uppercase;opacity:.65}
+dialog.contatto .cv{display:block;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;font:500 1rem/1.4 var(--ui);overflow-wrap:anywhere;user-select:all}
+dialog.contatto .cv.cor{white-space:pre-line;font-size:.92rem}
+dialog.contatto .ca{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+dialog.contatto .ca .btn{min-height:46px;padding:0 20px;cursor:pointer;font-size:.95rem}
+dialog.contatto .ca .btn.primary{padding:0 22px}
